@@ -13,12 +13,28 @@
     position: absolute;
     top: 40%;
 
-    .prev {
+    a.prev {
+      font-size: 0;
       float: left;
+
+      &:before {
+        content: "\f104";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 86px;
+      }
     }
 
-    .next {
+    a.next {
+      font-size: 0;
       float: right;
+
+      &:before {
+        content: "\f105";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 86px;
+      }
     }
   }
 
