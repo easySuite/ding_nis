@@ -1,0 +1,29 @@
+.field-name-field-ding-news-title-image,
+.field-name-field-ding-event-title-image,
+.field-name-field-ding-page-title-image {
+  .field-slideshow-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .field-slideshow-controls {
+    z-index: 9999;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 40%;
+
+    .prev {
+      float: left;
+    }
+
+    .next {
+      float: right;
+    }
+  }
+
+  .field-slideshow-caption-text {
+    font-style: italic;
+    font-size: 0.9em;
+  }
+}
