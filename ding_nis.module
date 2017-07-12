@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Ding Nodes Image Slideshow module functionality.
+ */
+
+include_once 'ding_nis.features.inc';

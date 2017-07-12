@@ -1,0 +1,31 @@
+.field-name-field-ding-news-title-image .field-slideshow-wrapper,
+.field-name-field-ding-event-title-image .field-slideshow-wrapper,
+.field-name-field-ding-page-title-image .field-slideshow-wrapper {
+  width: 100%;
+  position: relative;
+}
+.field-name-field-ding-news-title-image .field-slideshow-controls,
+.field-name-field-ding-event-title-image .field-slideshow-controls,
+.field-name-field-ding-page-title-image .field-slideshow-controls {
+  z-index: 9999;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 40%;
+}
+.field-name-field-ding-news-title-image .field-slideshow-controls .prev,
+.field-name-field-ding-event-title-image .field-slideshow-controls .prev,
+.field-name-field-ding-page-title-image .field-slideshow-controls .prev {
+  float: left;
+}
+.field-name-field-ding-news-title-image .field-slideshow-controls .next,
+.field-name-field-ding-event-title-image .field-slideshow-controls .next,
+.field-name-field-ding-page-title-image .field-slideshow-controls .next {
+  float: right;
+}
+.field-name-field-ding-news-title-image .field-slideshow-caption-text,
+.field-name-field-ding-event-title-image .field-slideshow-caption-text,
+.field-name-field-ding-page-title-image .field-slideshow-caption-text {
+  font-style: italic;
+  font-size: 0.9em;
+}
