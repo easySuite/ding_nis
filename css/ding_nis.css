@@ -47,3 +47,9 @@
   font-style: italic;
   font-size: 0.9em;
 }
+
+.page-node .pane-page-content .field-name-field-ding-news-title-image .field-item .field-slideshow,
+.page-node .pane-page-content .field-name-field-ding-event-image-gallery .field-item .field-slideshow,
+.page-node .pane-page-content .field-name-field-ding-page-title-image .field-item .field-slideshow {
+  padding-bottom: 0 !important;
+}
