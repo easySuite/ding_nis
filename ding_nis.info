@@ -1,6 +1,7 @@
 name = Ding Nodes Image Slideshow
 core = 7.x
 package = easyOPAC
+version = 7.x-3.1.0
 dependencies[] = ding_event
 dependencies[] = ding_news
 dependencies[] = ding_page
