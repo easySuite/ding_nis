@@ -12,79 +12,10 @@ function ding_nis_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: field_base
-  $overrides["field_base.field_ding_event_title_image.cardinality"] = -1;
   $overrides["field_base.field_ding_news_title_image.cardinality"] = -1;
   $overrides["field_base.field_ding_page_title_image.cardinality"] = -1;
 
   // Exported overrides for: field_instance
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|module"] = 'field_slideshow';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|image_link"]["DELETED"] = TRUE;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_caption"] = 'title';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_caption_link"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_circular"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_follow"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_image_style"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_scroll"] = 1;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_skin"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_speed"] = 500;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_vertical"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_carousel_visible"] = 3;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_colorbox_image_style"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_colorbox_slideshow"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_colorbox_slideshow_speed"] = 4000;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_colorbox_speed"] = 350;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_colorbox_transition"] = 'elastic';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_controls"] = 1;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_controls_pause"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_controls_position"] = 'before';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_field_collection_image"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_fx"] = 'slideX';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_image_style"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_link"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_order"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_pager"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_pager_image_style"] = '';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_pager_position"] = 'after';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_pause"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_speed"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_start_on_hover"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|slideshow_timeout"] = 0;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|settings|styles"]["DELETED"] = TRUE;
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.display|default|type"] = 'slideshow';
-  $overrides["field_instance.node-ding_event-field_ding_event_title_image.widget|settings"] = array(
-    'allowed_schemes' => array(
-      'oembed' => 0,
-      'public' => 'public',
-      'vimeo' => 0,
-      'youtube' => 0,
-    ),
-    'allowed_types' => array(
-      'audio' => 0,
-      'document' => 0,
-      'image' => 'image',
-      'video' => 0,
-    ),
-    'browser_plugins' => array(
-      'ding_content' => 0,
-      'media_default--media_browser_1' => 0,
-      'media_default--media_browser_my_files' => 0,
-      'media_internet' => 0,
-      'upload' => 0,
-      'youtube' => 0,
-    ),
-    'manualcrop_crop_info' => 1,
-    'manualcrop_default_crop_area' => 1,
-    'manualcrop_enable' => 1,
-    'manualcrop_inline_crop' => 0,
-    'manualcrop_instant_crop' => FALSE,
-    'manualcrop_instant_preview' => 1,
-    'manualcrop_keyboard' => 1,
-    'manualcrop_maximize_default_crop_area' => 0,
-    'manualcrop_require_cropping' => array(),
-    'manualcrop_styles_mode' => 'include',
-    'manualcrop_thumblist' => 0,
-    'progress_indicator' => 'throbber',
-  );
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|module"] = 'field_slideshow';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|image_link"]["DELETED"] = TRUE;
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_caption"] = 'title';
@@ -107,7 +38,7 @@ function ding_nis_features_override_default_overrides() {
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_controls_position"] = 'before';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_field_collection_image"] = '';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_fx"] = 'slideX';
-  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_image_style"] = '';
+  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_image_style"] = 'ding_nodes_image_gallery';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_link"] = '';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_order"] = '';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|slideshow_pager"] = '';
@@ -158,7 +89,7 @@ function ding_nis_features_override_default_overrides() {
   $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_controls_position"] = 'before';
   $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_field_collection_image"] = '';
   $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_fx"] = 'slideX';
-  $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_image_style"] = '';
+  $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_image_style"] = 'ding_nodes_image_gallery';
   $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_link"] = '';
   $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_order"] = '';
   $overrides["field_instance.node-ding_page-field_ding_page_title_image.display|default|settings|slideshow_pager"] = '';

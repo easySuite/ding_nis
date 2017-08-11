@@ -1,0 +1,55 @@
+.field-name-field-ding-news-title-image,
+.field-name-field-ding-event-image-gallery,
+.field-name-field-ding-page-title-image {
+  .field-slideshow-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .field-slideshow-controls {
+    z-index: 9999;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 40%;
+
+    a.prev {
+      font-size: 0;
+      float: left;
+
+      &:before {
+        content: "\f104";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 86px;
+      }
+    }
+
+    a.next {
+      font-size: 0;
+      float: right;
+
+      &:before {
+        content: "\f105";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-size: 86px;
+      }
+    }
+  }
+
+  .field-slideshow-caption-text {
+    font-style: italic;
+    font-size: 0.9em;
+  }
+}
+
+.page-node .pane-page-content {
+  .field-name-field-ding-news-title-image,
+  .field-name-field-ding-event-image-gallery,
+  .field-name-field-ding-page-title-image {
+    .field-item .field-slideshow {
+      padding-bottom: 0 !important;
+    }
+  }
+}
