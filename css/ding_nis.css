@@ -1,11 +1,11 @@
 .field-name-field-ding-news-title-image .field-slideshow-wrapper,
-.field-name-field-ding-event-image-gallery .field-slideshow-wrapper,
+.field-name-field-ding-event-title-image .field-slideshow-wrapper,
 .field-name-field-ding-page-title-image .field-slideshow-wrapper {
   width: 100%;
   position: relative;
 }
 .field-name-field-ding-news-title-image .field-slideshow-controls,
-.field-name-field-ding-event-image-gallery .field-slideshow-controls,
+.field-name-field-ding-event-title-image .field-slideshow-controls,
 .field-name-field-ding-page-title-image .field-slideshow-controls {
   z-index: 9999;
   width: 100%;
@@ -14,13 +14,13 @@
   top: 40%;
 }
 .field-name-field-ding-news-title-image .field-slideshow-controls a.prev,
-.field-name-field-ding-event-image-gallery .field-slideshow-controls a.prev,
+.field-name-field-ding-event-title-image .field-slideshow-controls a.prev,
 .field-name-field-ding-page-title-image .field-slideshow-controls a.prev {
   font-size: 0;
   float: left;
 }
 .field-name-field-ding-news-title-image .field-slideshow-controls a.prev:before,
-.field-name-field-ding-event-image-gallery .field-slideshow-controls a.prev:before,
+.field-name-field-ding-event-title-image .field-slideshow-controls a.prev:before,
 .field-name-field-ding-page-title-image .field-slideshow-controls a.prev:before {
   content: "\f104";
   display: inline-block;
@@ -28,13 +28,13 @@
   font-size: 86px;
 }
 .field-name-field-ding-news-title-image .field-slideshow-controls a.next,
-.field-name-field-ding-event-image-gallery .field-slideshow-controls a.next,
+.field-name-field-ding-event-title-image .field-slideshow-controls a.next,
 .field-name-field-ding-page-title-image .field-slideshow-controls a.next {
   font-size: 0;
   float: right;
 }
 .field-name-field-ding-news-title-image .field-slideshow-controls a.next:before,
-.field-name-field-ding-event-image-gallery .field-slideshow-controls a.next:before,
+.field-name-field-ding-event-title-image .field-slideshow-controls a.next:before,
 .field-name-field-ding-page-title-image .field-slideshow-controls a.next:before {
   content: "\f105";
   display: inline-block;
@@ -42,14 +42,14 @@
   font-size: 86px;
 }
 .field-name-field-ding-news-title-image .field-slideshow-caption-text,
-.field-name-field-ding-event-image-gallery .field-slideshow-caption-text,
+.field-name-field-ding-event-title-image .field-slideshow-caption-text,
 .field-name-field-ding-page-title-image .field-slideshow-caption-text {
   font-style: italic;
   font-size: 0.9em;
 }
 
 .page-node .pane-page-content .field-name-field-ding-news-title-image .field-item .field-slideshow,
-.page-node .pane-page-content .field-name-field-ding-event-image-gallery .field-item .field-slideshow,
+.page-node .pane-page-content .field-name-field-ding-event-title-image .field-item .field-slideshow,
 .page-node .pane-page-content .field-name-field-ding-page-title-image .field-item .field-slideshow {
   padding-bottom: 0 !important;
 }
