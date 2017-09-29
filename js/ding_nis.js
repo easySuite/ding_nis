@@ -1,6 +1,6 @@
 (function ($) {
   Drupal.behaviors.ding_nis = {
-    attach: function (context) {
+    attach: function (context) {     
       for (var i in Drupal.settings.field_slideshow) {
         if (i !== undefined) {
           $('#' + i + '-wrapper').hover(
@@ -13,6 +13,7 @@
           );
         }
       }
+      $('.field-slideshow-controls a').addClass('icon');
     }
   };
 })(jQuery);
