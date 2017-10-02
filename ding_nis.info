@@ -16,5 +16,6 @@ features[features_api][] = api:2
 features[features_overrides][] = field_base.field_ding_event_title_image.cardinality
 features[features_overrides][] = field_base.field_ding_page_title_image.cardinality
 features[features_overrides][] = field_base.field_ding_news_title_image.cardinality
+features[image][] = ding_nis_secondary_large
 features[image][] = ding_nodes_image_gallery
 mtime = 1506080192
