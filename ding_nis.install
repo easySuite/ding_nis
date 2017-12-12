@@ -67,5 +67,21 @@ function ding_nis_enable() {
 
     // Updating field instance.
     field_update_instance($instance);
+
+    // Getting field base settings.
+    $base = field_read_field($field);
+    // Force cardinality to -1.
+    $base['cardinality'] = '-1';
+    // Update field base with unlimited cardinality.
+    field_update_field($base);
   }
+
+  variable_set('ding_nis_random', rand());
+}
+
+/**
+ * Implements hook_disable().
+ */
+function ding_nis_disable() {
+  variable_del('ding_nis_random');
 }

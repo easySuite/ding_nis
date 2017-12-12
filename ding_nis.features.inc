@@ -5,17 +5,11 @@
  */
 
 /**
- * Implements hook_field_default_field_bases_alter().
+ * Implements hook_ctools_plugin_api().
  */
-function ding_nis_field_default_field_bases_alter(&$data) {
-  if (isset($data['field_ding_event_title_image'])) {
-    $data['field_ding_event_title_image']['cardinality'] = -1; /* WAS: 1 */
-  }
-  if (isset($data['field_ding_page_title_image'])) {
-    $data['field_ding_page_title_image']['cardinality'] = -1; /* WAS: 1 */
-  }
-  if (isset($data['field_ding_news_title_image'])) {
-    $data['field_ding_news_title_image']['cardinality'] = -1; /* WAS: 1 */
+function ding_nis_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
   }
 }
 
