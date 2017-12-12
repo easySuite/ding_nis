@@ -11,6 +11,13 @@ include_once 'ding_nis.features.inc';
  * Implements hook_post_features_revert().
  */
 function ding_nis_post_features_revert($component) {
+  _ding_nis_alter_image_fields();
+}
+
+/**
+ * Handler for altering title image fields.
+ */
+function _ding_nis_alter_image_fields() {
   $subjects = array(
     'ding_news' => 'field_ding_news_title_image',
     'ding_event' => 'field_ding_event_title_image',
