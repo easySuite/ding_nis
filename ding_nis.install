@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for ding_nis module.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function ding_nis_enable() {
+  _ding_nis_alter_image_fields();
+}
+
+/**
+ * Implements hook_disable().
+ */
+function ding_nis_disable() {
+  variable_del('ding_nis_random');
+}
