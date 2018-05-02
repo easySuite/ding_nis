@@ -17,5 +17,7 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[image][] = ding_nis_secondary_large
 features[image][] = ding_nodes_image_gallery
+features[variable][] = colorbox_load
+features[variable][] = colorbox_style
 features[variable][] = ding_nis_random
 mtime = 1513076600
