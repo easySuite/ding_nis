@@ -7,7 +7,7 @@ projects[field_slideshow][version] = "1.82"
 projects[colorbox][subdir] = "contrib"
 projects[colorbox][version] = "2.13"
 
-libraries[colorbox][download][type] = "git"
+libraries[colorbox][download][type] = "get"
 libraries[colorbox][download][url] =  "https://github.com/jackmoore/colorbox/archive/1.x.zip"
 libraries[colorbox][directory_name] = "colorbox"
 libraries[colorbox][destination] = "libraries"
