@@ -3,6 +3,7 @@ core = 7.x
 package = easyOPAC
 version = 7.x-4.0.2
 dependencies[] = ctools
+dependencies[] = colorbox
 dependencies[] = ding_event
 dependencies[] = ding_news
 dependencies[] = ding_page
