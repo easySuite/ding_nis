@@ -76,7 +76,7 @@ function _ding_nis_alter_image_fields() {
     // Getting field base settings.
     $base = field_read_field($field);
     // Check if cardinality is correctly set.
-    if($base['cardinality'] != '-1') {
+    if ($base['cardinality'] != '-1') {
       // Force cardinality to -1.
       $base['cardinality'] = '-1';
       // Update field base with unlimited cardinality.
