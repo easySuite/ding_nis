@@ -21,15 +21,11 @@ function _ding_nis_alter_image_fields() {
   $subjects = array(
     'ding_news' => 'field_ding_news_title_image',
     'ding_event' => 'field_ding_event_title_image',
-    'ding_page' => 'field_ding_page_title_image',
   );
 
   foreach ($subjects as $ct => $field) {
     // Loading current field field_instance.
     $instance = field_read_instance('node', $field, $ct);
-
-    // Page CT uses another image style, so setting needed style.
-    $image_style = ($ct == 'ding_page') ? 'ding_nodes_image_gallery' : 'ding_nis_secondary_large';
 
     // Loading field display settings for default view.
     $display_settings = array(
