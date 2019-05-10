@@ -1,5 +1,5 @@
 # Ding Nodes Image Slideshow
-This module alters default Ding News, Ding Event and Ding Page CT's **title_image** field
+This module alters default Ding News and Ding Event CT's **title_image** field
 and transforming it into slideshow with manual control.
 Also this module is allowing multiple images to be added to one field.
 
