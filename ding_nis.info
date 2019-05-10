@@ -6,7 +6,6 @@ dependencies[] = ctools
 dependencies[] = colorbox
 dependencies[] = ding_event
 dependencies[] = ding_news
-dependencies[] = ding_page
 dependencies[] = features
 dependencies[] = field_slideshow
 dependencies[] = image
