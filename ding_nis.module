@@ -8,6 +8,22 @@
 include_once 'ding_nis.features.inc';
 
 /**
+ * Implements hook_menu().
+ */
+function ding_nis_menu() {
+  $items['admin/config/media/ding_nis'] = [
+    'title' => 'Title image display mode',
+    'description' => 'Configure display mode for title image.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ding_nis_admin_form'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'ding_nis.admin.inc',
+  ];
+
+  return $items;
+}
+
+/**
  * Implements hook_post_features_revert().
  */
 function ding_nis_post_features_revert($component) {
@@ -34,7 +50,7 @@ function _ding_nis_alter_image_fields() {
       'weight' => '12',
       'module' => 'field_slideshow',
       'settings' => array(
-        'slideshow_image_style' => $image_style,
+        'slideshow_image_style' => 'ding_nis_secondary_large',
         'slideshow_link' => 'colorbox',
         'slideshow_caption' => 'title',
         'slideshow_caption_link' => '',
@@ -86,3 +102,55 @@ function _ding_nis_alter_image_fields() {
 
   variable_set('ding_nis_random', rand());
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function ding_nis_form_alter(&$form, &$form_state, $form_id) {
+  $content_types = ['ding_event', 'ding_news'];
+  foreach ($content_types as $content_type) {
+    if ($form_id == $content_type . '_node_form') {
+      $group = "group_{$content_type}_images";
+      array_push($form['#groups'][$group]->children, 'field_title_image_display_mode');
+      $form['#group_children']['field_title_image_display_mode'] = $group;
+      $form['field_title_image_display_mode']['#weight'] = 0;
+
+      if (!isset($form['field_title_image_display_mode'][LANGUAGE_NONE]['#default_value'])) {
+        $default_mode = variable_get('ding_nis_display_mode', 1);
+        $form['field_title_image_display_mode'][LANGUAGE_NONE]['#default_value'] = $default_mode;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ding_nis_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  if ($element["#field_name"] == 'field_ding_event_title_image' || $element['#field_name'] == 'field_ding_news_title_image') {
+    $display_mode = variable_get('ding_nis_display_mode', 1);
+    $entity = $variables['element']['#object'];
+
+    if (isset($entity->field_title_image_display_mode[LANGUAGE_NONE])) {
+      $display_mode = $entity->field_title_image_display_mode[LANGUAGE_NONE][0]['value'];
+    }
+
+    if ($display_mode == '0') {
+      $theme = 'image_formatter';
+
+      $items = [];
+
+      foreach ($variables['element']['#items'] as $item) {
+        $items[] = [
+          '#theme' => $theme,
+          '#item' => $item,
+          '#image_style' => 'ding_nis_secondary_large',
+        ];
+      }
+
+      $variables['items'] = $items;
+    }
+  }
+}
+
