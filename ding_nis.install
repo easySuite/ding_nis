@@ -10,6 +10,7 @@
  */
 function ding_nis_enable() {
   _ding_nis_alter_image_fields();
+  _create_widget_display_mode_field();
 }
 
 /**
@@ -17,4 +18,73 @@ function ding_nis_enable() {
  */
 function ding_nis_disable() {
   variable_del('ding_nis_random');
+  _delete_widget_display_mode_field();
+}
+
+/**
+ * Create field_title_image_display_mode field and attach to CT's.
+ *
+ * @throws \FieldException
+ */
+function _create_widget_display_mode_field() {
+  $content_types = [
+    'ding_event',
+    'ding_news'
+  ];
+
+  $field = [
+    'field_name' => 'field_title_image_display_mode',
+    'type' => 'list_boolean',
+    'module' => 'list',
+    'settings' => [
+      'allowed_values' => [
+        1 => 'Slideshow',
+        0 => 'Images list',
+      ]
+    ]
+  ];
+
+  field_create_field($field);
+
+  foreach ($content_types as $content_type) {
+    $instance = array(
+      'field_name' => $field['field_name'],
+      'entity_type' => 'node',
+      'bundle' => $content_type,
+      'label' => 'Title image display mode',
+      'description' => 'Gives the possibility to set display mode of title image per node. Also this can be changed globally from <a href="/admin/config/media/ding_nis">Title image display mode</a> administration page.',
+      'required' => TRUE,
+      'settings' => array(),
+      'widget' => array('type' => 'options_buttons', 'module' => 'options'),
+      'display' => array(
+        'default' => array('label' => 'hidden', 'type' => 'hidden'),
+      ),
+    );
+
+    field_create_instance($instance);
+  }
+}
+
+/**
+ * Delete field_title_image_display_mode's instances and field itself.
+ */
+function _delete_widget_display_mode_field() {
+  $content_types = [
+    'ding_event',
+    'ding_news'
+  ];
+
+  foreach ($content_types as $content_type) {
+    $instance = field_info_instance('node', 'field_title_image_display_mode', $content_type);
+    field_delete_instance($instance, FALSE);
+  }
+
+  field_delete_field('field_title_image_display_mode');
+}
+
+/**
+ * Add possibility to control title image view mode.
+ */
+function ding_nis_update_7001() {
+  _create_widget_display_mode_field();
 }
