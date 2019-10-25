@@ -20,4 +20,5 @@ features[image][] = ding_nodes_image_gallery
 features[variable][] = colorbox_load
 features[variable][] = colorbox_style
 features[variable][] = ding_nis_random
+configure = admin/config/media/ding_nis
 mtime = 1513076600
